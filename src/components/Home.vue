@@ -35,7 +35,7 @@ const emdDatas = [
 
 ];
 
-let activeIndex = ref("index");
+let activeIndex = ref("index/mesh");
 let route = useRouter();
 watch(
   () => route.currentRoute.value,
@@ -66,17 +66,17 @@ watch(
             active-text-color="#357A81"
             menu-trigger="hover"
             :ellipsis="false"
-            :router="true"
+            router
             >
             <div class="flex-grow"></div>
-            <el-menu-item index="/mesh">3D View</el-menu-item>
-            <el-menu-item index="/volume">Volume Rendering</el-menu-item>
-            <el-menu-item index="">Download</el-menu-item>
-            <el-sub-menu index="2">
+            <el-menu-item index="/index/mesh">3D View</el-menu-item>
+            <el-menu-item index="/index/volume">Volume Rendering</el-menu-item>
+            <el-menu-item >Download</el-menu-item>
+            <el-sub-menu >
               <template #title>Select Protein</template>
-              <el-menu-item index="2-1">id1</el-menu-item>
-              <el-menu-item index="2-2">id2</el-menu-item>
-              <el-menu-item index="2-3">id3</el-menu-item>
+              <el-menu-item >id1</el-menu-item>
+              <el-menu-item >id2</el-menu-item>
+              <el-menu-item >id3</el-menu-item>
             </el-sub-menu>
             
           </el-menu>

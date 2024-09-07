@@ -27,4 +27,14 @@ export default defineConfig({
     include: ['mrc'],  // 手动指定要进行依赖预构建的 CommonJS 模块
   },
 
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://47.103.73.130:8080', // 后端服务器地址
+        changeOrigin: true, // 推荐开启
+        //rewrite: (path) => path.replace(/^\/api/, ''), // 可选，路径重写
+      },
+    },
+  },
+
 })
