@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+ul li {
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  /* 4xl */
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
+h2 {
+  /* 2xl */
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+h3 {
+  /* lg */
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
