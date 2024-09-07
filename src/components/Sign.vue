@@ -15,7 +15,7 @@
           </div>
           <el-input v-model="password" type="password" class="h-10"></el-input>
         </el-form-item>
-        <el-button type="primary" class="w-full mb-6 bg-zinc-700 h-9 text-white">Sign in</el-button>
+        <el-button @click="navigateToTargetRoute" type="primary" class="w-full mb-6 bg-zinc-700 h-9 text-white">Sign in</el-button>
         <div class="text-center">
           <span class="text-sm text-gray-600">Not a member ?</span>
           <a href="#" class="text-sm text-indigo-600 hover:underline">  Click to register</a>
@@ -26,6 +26,13 @@
 </template>
 
 <script setup>
+import { watch } from "vue";
+import router from "../router"
+
+function navigateToTargetRoute(){
+  // 使用 this.$router.push() 方法跳转到目标路由
+  router.push('/index'); // 替换为实际的目标路由
+}
 
 </script>
 

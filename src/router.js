@@ -10,7 +10,7 @@ const routes = [
   {
     path: "/index", component: Home,
     children: [
-      { path: "", component: Mesh },  // 当访问 /index 时，重定向到 /index/mesh
+       // 当访问 /index 时，重定向到 /index/mesh
       { path: "volume", component: Volume },  // 相对路径，不要使用 "/volume"
       { path: "mesh", component: Mesh },      // 相对路径，不要使用 "/mesh"
     ]
