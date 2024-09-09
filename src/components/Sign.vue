@@ -56,6 +56,10 @@ import router from "../router"
 import { ElMessage, ElMessageBox} from 'element-plus';
 import axios from 'axios'; // 引入axios
 
+axios.interceptors.request.use(config => {
+  config.withCredentials = true; // 允许跨域携带凭证（cookies）
+  return config;
+});
 
 
 const loginFormRef = ref(null);
@@ -128,7 +132,7 @@ const handleLogin = async () => {
 
   if(valid){
     try {
-      const response = await axios.post('/api/login', formData)
+      const response = await axios.post('/api/login', formData, { withCredentials: true })
       if(response.data.code == 200){
         router.push('/index')
       }else{
